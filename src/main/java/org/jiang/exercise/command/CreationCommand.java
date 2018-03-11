@@ -24,8 +24,8 @@ public class CreationCommand extends DefaultCommand{
 	@Override
 	public void visit(AsciiCanvas canvas) {
 		char[][] pixels = canvas.getPixels();
-		for(int i = 0;i<width;i++){
-			for(int j = 0;j<height;j++){
+		for(int i = 1;i<=width;i++){
+			for(int j = 1;j<=height;j++){
 				pixels[i][j]=pixel;
 			}
 		}

@@ -20,7 +20,7 @@ public abstract class DefaultCommand implements Command,CanvasVisitor{
 	protected void outofBounds(Canvas canvas, int x, int y) throws ExecutionException{
 		int width = canvas.getWidth();
 		int height = canvas.getHeight();
-		if(x<0 || y<0 || x>=width || y >=height) throw new ExecutionException("Point("+x+","+y+") outofbounds of canvas");
+		if(x<1 || y<1 || x>width || y >height) throw new ExecutionException("Point("+x+","+y+") outofbounds of canvas");
 		
 	}
 }

@@ -27,8 +27,8 @@ public class BucketFillCommand extends DefaultCommand{
 	}
 
 	private void updateColor(char fromColor, int pointX, int pointY, char[][] pixels, int width, int height) {
-		if(pointX>=0 && pointX<width && pointY>=0 && pointY<height) {
-			if(pixels[pointX][pointY]==fromColor) {
+		if(pointX>=1 && pointX<=width && pointY>=1 && pointY<=height) {
+			if(pixels[pointX][pointY]==fromColor && pixels[pointX][pointY]!=toColor) {
 				pixels[pointX][pointY]=toColor;
 				updateColor(fromColor,pointX-1,pointY,pixels,width,height);
 				updateColor(fromColor,pointX+1,pointY,pixels,width,height);

@@ -1,7 +1,6 @@
 package org.jiang.exercise;
 
 import java.io.BufferedReader;
-import java.io.Console;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -36,16 +35,21 @@ public class Main {
 				}
 			} catch (ParseException e) {
 				System.out.println("please enter a valid command. Refer to command/format supported");
-				e.printStackTrace();
+				e.printStackTrace(System.out);
 			} catch (ExecutionException e) {
 				System.out.println("please enter a valid command. Refer to command/format supported");
-				e.printStackTrace();
+				e.printStackTrace(System.out);
 			}
 		}
 	}
 
+	/**
+	 * @return
+	 * @throws IOException
+	 */
 	private String readCommand() throws IOException {
-		return input.readLine().trim();
+		System.out.print("enter command: ");
+		return input.readLine();
 	}
 	
 	

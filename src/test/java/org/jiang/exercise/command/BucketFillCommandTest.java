@@ -19,11 +19,20 @@ public class BucketFillCommandTest extends CommandTestBase{
 	}
 	
 	@Test
-	public void visitor_replaceAll_Test() throws Exception{
-		testCommand = new BucketFillCommand(3,3,'0');
+	public void visitor_replaceAllWithSameColor_Test() throws Exception{
+		testCommand = new BucketFillCommand(1,1,' ');
 		testCommand.execute(context);
 		Canvas canvas = context.getCanvas();
-		valueTest(0,0,canvas.getWidth()-1,canvas.getHeight()-1, '0');
+		valueTest(1,1,canvas.getWidth(),canvas.getHeight(), ' ');
+	}
+
+
+	@Test
+	public void visitor_replaceAllWithDifferentColor_Test() throws Exception{
+		testCommand = new BucketFillCommand(1,1,'P');
+		testCommand.execute(context);
+		Canvas canvas = context.getCanvas();
+		valueTest(1,1,canvas.getWidth(),canvas.getHeight(), 'P');
 	}
 
 	//flood inside
@@ -37,8 +46,8 @@ public class BucketFillCommandTest extends CommandTestBase{
 		char[][] pixels = ((AsciiCanvas)canvas).getPixels();
 		int width  = canvas.getWidth();
 		int height = canvas.getHeight();
-		for(int w = 0;w<width;w++) {
-			for(int h=0;h<height;h++) {
+		for(int w = 1;w<=width;w++) {
+			for(int h=1;h<=height;h++) {
 				if(inRectEdge(w,h,x1,y1,x2,y2)) {
 					assertEquals('x',pixels[w][h]);
 				}else if(insideRect(w,h,x1,y1,x2,y2)) {
@@ -61,8 +70,8 @@ public class BucketFillCommandTest extends CommandTestBase{
 		char[][] pixels = ((AsciiCanvas)canvas).getPixels();
 		int width  = canvas.getWidth();
 		int height = canvas.getHeight();
-		for(int w = 0;w<width;w++) {
-			for(int h=0;h<height;h++) {
+		for(int w = 1;w<=width;w++) {
+			for(int h=1;h<=height;h++) {
 				if(inRectEdge(w,h,x1,y1,x2,y2)) {
 					assertEquals('x',pixels[w][h]);
 				}else if(insideRect(w,h,x1,y1,x2,y2)) {
@@ -85,8 +94,8 @@ public class BucketFillCommandTest extends CommandTestBase{
 		char[][] pixels = ((AsciiCanvas)canvas).getPixels();
 		int width  = canvas.getWidth();
 		int height = canvas.getHeight();
-		for(int w = 0;w<width;w++) {
-			for(int h=0;h<height;h++) {
+		for(int w = 1;w<=width;w++) {
+			for(int h=1;h<=height;h++) {
 				if(inRectEdge(w,h,x1,y1,x2,y2)) {
 					assertEquals('0',pixels[w][h]);
 				}else if(insideRect(w,h,x1,y1,x2,y2)) {

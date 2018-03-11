@@ -1,8 +1,6 @@
 package org.jiang.exercise.command;
 
-import org.jiang.exercise.ExerciseContext;
 import org.jiang.exercise.canvas.Canvas;
-import org.jiang.exercise.canvas.CanvasVisitor;
 import org.jiang.exercise.canvas.AsciiCanvas;
 
 public class RectangleCommand extends DefaultCommand{

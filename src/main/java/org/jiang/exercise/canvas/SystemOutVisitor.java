@@ -19,9 +19,9 @@ public class SystemOutVisitor implements CanvasVisitor{
 			printHorizentalBorder(width);
 			newLine();
 			char[][] pixels = canvas.getPixels();
-			for(int h=0;h<height;h++){
+			for(int h=1;h<=height;h++){
 				printVerticalBorder();
-				for(int w=0;w<width;w++){
+				for(int w=1;w<=width;w++){
 					printChar(pixels[w][h]);
 				}
 				printVerticalBorder();

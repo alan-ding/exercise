@@ -9,7 +9,7 @@ import org.jiang.exercise.command.BucketFillCommand;
 public class BucketFillCommandParser extends CommandParser{
 
 	public BucketFillCommandParser() {
-		super('B', Pattern.compile("B\\W+(\\d+)\\W+(\\d+)\\W+(\\w)"));
+		super('B', Pattern.compile("B\\W+(\\d+)\\W+(\\d+)\\W+(.{1})"));
 	}
 
 	@Override

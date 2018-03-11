@@ -25,8 +25,8 @@ public class RectangleCommandTest extends CommandTestBase{
 		char[][] data = canvas.getPixels();
 		int width = canvas.getWidth();
 		int height = canvas.getHeight();
-		for(int w = 0;w<width;w++) {
-			for(int h = 0;h<height;h++) {
+		for(int w = 1;w<=width;w++) {
+			for(int h = 1;h<=height;h++) {
 				if(inRectEdge(w,h,x1,y1,x2,y2)) {
 					assertEquals('x',data[w][h]);
 				}else {

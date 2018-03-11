@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 import org.jiang.exercise.command.BucketFillCommand;
-import org.jiang.exercise.command.LineCommand;
 import org.junit.Test;
 
 public class BucketFillCommandParserTest {

@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 import org.jiang.exercise.command.CreationCommand;
-import org.jiang.exercise.command.LineCommand;
-import org.jiang.exercise.command.RectangleCommand;
 import org.junit.Test;
 
 public class CreationCommandParserTest {
