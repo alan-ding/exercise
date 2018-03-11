@@ -4,10 +4,10 @@ import org.jiang.exercise.command.parser.BucketFillCommandParser;
 import org.jiang.exercise.command.parser.CommandParser;
 import org.jiang.exercise.command.parser.CreationCommandParser;
 import org.jiang.exercise.command.parser.LineCommandParser;
+import org.jiang.exercise.command.parser.ParseException;
 import org.jiang.exercise.command.parser.QuitCommandParser;
 import org.jiang.exercise.command.parser.RectangleCommandParser;
 
-import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParseException;
 
 public class CommandFactory {
 	

@@ -1,8 +1,8 @@
 package org.jiang.exercise.canvas;
 
-public class ConsoleCanvas extends AbstractCanvas{
+public class AsciiCanvas extends AbstractCanvas{
 	private final char[][] pixels;
-	public ConsoleCanvas(int width, int height) {
+	public AsciiCanvas(int width, int height) {
 		super(width, height);
 		pixels = new char[width][height];
 	}

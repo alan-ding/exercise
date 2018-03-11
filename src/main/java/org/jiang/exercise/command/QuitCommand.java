@@ -6,8 +6,9 @@ import org.jiang.exercise.canvas.CanvasVisitor;
 public class QuitCommand implements Command,CanvasVisitor{
 
 	@Override
-	public void execute(ExerciseContext context) throws Exception {
+	public void execute(ExerciseContext context) throws ExecutionException {
 		context.setCanvas(null);
+		System.out.println("Thanks for using. See you next time.");
 		System.exit(0);
 	}
 

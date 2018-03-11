@@ -14,7 +14,7 @@ public class BucketFillCommandParser extends CommandParser{
 
 	@Override
 	protected Command buildCommand(Matcher m) {
-		return new BucketFillCommand(Integer.parseInt(m.group(1)), Integer.parseInt(m.group(2)));
+		return new BucketFillCommand(Integer.parseInt(m.group(1)), Integer.parseInt(m.group(2)),m.group(3).charAt(0));
 	}
 
 }

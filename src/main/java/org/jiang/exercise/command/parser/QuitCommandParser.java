@@ -10,7 +10,7 @@ public class QuitCommandParser extends CommandParser{
 
 	
 	public QuitCommandParser() {
-		super('Q', Pattern.compile("Q\\W+"));
+		super('Q', Pattern.compile("Q\\W*"));
 	}
 
 	@Override
