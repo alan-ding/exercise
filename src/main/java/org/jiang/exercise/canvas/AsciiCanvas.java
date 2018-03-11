@@ -12,7 +12,7 @@ package org.jiang.exercise.canvas;
  */
 public class AsciiCanvas extends AbstractCanvas{
 	/**
-	 * WARNING: canvas' height and width is NOT same with the array's dimension.
+	 * WARNING: canvas' height and width is <strong>NOT</strong> same with the array's dimension.
 	 * Always use {@link org.jiang.exercise.canvas.Canvas#getWidth() getWidth} and {@link org.jiang.exercise.canvas.Canvas#getHeight() getHeight} to get the size of a {@link org.jiang.exercise.canvas.Canvas Canvas}
 	 */
 	private final char[][] pixels;

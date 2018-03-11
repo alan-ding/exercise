@@ -26,6 +26,7 @@ public class BucketFillCommand extends DefaultCommand{
 		outofBounds(canvas,x,y);
 	}
 
+	//TBD improve the performance via a hash map or a boolean matrix to trace the point already done,   
 	private void updateColor(char fromColor, int pointX, int pointY, char[][] pixels, int width, int height) {
 		if(pointX>=1 && pointX<=width && pointY>=1 && pointY<=height) {
 			if(pixels[pointX][pointY]==fromColor && pixels[pointX][pointY]!=toColor) {
